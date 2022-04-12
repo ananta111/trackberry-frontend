@@ -1,0 +1,16 @@
+.controlpanel {
+  margin: 0.5em 1em 0.5em 1em;
+  padding: 0.3em;
+  height: 2em;
+}
+
+.track_buttons{
+  margin: 0.5em 1em 0.5em 1em;
+  padding: 0.3em;
+  height: 2em;
+  float: right;
+}
+
+.button {
+  margin: 0.5em 1em 0.5em 1em;
+}

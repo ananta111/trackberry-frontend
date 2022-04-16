@@ -5,8 +5,6 @@ import Filterbar from "../filter_bar/Filterbar"
 import ControlPanel from "../control_panel/ControlPanel"
 import "./Mailmap.css"
 import L from "leaflet";
-import getSample from "../test"
-import axios from "axios";
 import fetchData from "../api/trackerAPI";
 import moment from 'moment'
 
@@ -41,7 +39,7 @@ class Mailmap extends React.Component {
 
     onEachFeature = function (feature, layer) {
 
-    }
+    };
 
     updateMarkers = async (trackingNumber) => {
         const leafletMap = this.leafletMap.leafletElement;
@@ -59,13 +57,12 @@ class Mailmap extends React.Component {
         return (
             <div>
                 <Navbar/>
-                <ControlPanel/>
                 <Filterbar updateMarkers = {this.updateMarkers}/>
                 {this.state.isLoading && <p>Loading ... </p>}
                 <div className={"map"}>
                     <Map
                         ref={m => { this.leafletMap = m; }}
-                        center={[51.5, -0.09]}
+                        center={[0, 0]}
                         zoom={3}
                     >
                         <TileLayer
@@ -83,8 +80,8 @@ class Mailmap extends React.Component {
 
 const geojsonMarkerOptions = {
     color:"#9C6ADE",
-    radius: 8,
-    fillOpacity: 0.5,
+    radius: 5,
+    fillOpacity: 0.8,
     opacity: 0.8
 };
 

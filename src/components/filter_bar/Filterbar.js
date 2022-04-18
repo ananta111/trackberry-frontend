@@ -22,9 +22,9 @@ class Filterbar extends React.Component {
     return (
       <div>
         <div className={"datepicker"}>
-          <label for="time"></label>
-          <input type="datetime-local" id="time" onChange={this.handleChange} value="2018-06-12T19:30"/>
-          <button onClick={this.handleSubmit}>Submit</button>
+          {/*<label for="time"></label>*/}
+          {/*<input type="datetime-local" id="time" onChange={this.handleChange} value="2018-06-12T19:30"/>*/}
+          <button onClick={this.handleSubmit}>Refresh</button>
         </div>
       </div>
     );
